@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="plantumlgen:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="mywebapp.war">
+      <element id="artifact" artifact-name="plantumlgen:war exploded" />
+    </root>
+  </artifact>
+</component>
