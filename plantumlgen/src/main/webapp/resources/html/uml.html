@@ -1,0 +1,113 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>uml</title>
+    <style type="text/css">
+        /* Split the screen in half */
+        .whole{
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            overflow-x: hidden;
+        }
+
+        .split {
+            height: 100%;
+            width: 50%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            overflow-x: hidden;
+        }
+
+        /* Control the left side */
+        .left {
+            left: 0;
+        }
+
+        /* Control the right side */
+        .right {
+            right: 0;
+            border-left: 1px solid black;
+        }
+
+        .hidden{
+            visibility: hidden;
+        }
+
+        .actionbutton {
+            display: inline-block;
+            background: #d9d5ff;
+            height: 25px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            font-size: 12px;
+            border: 1px solid;
+            border-radius: 5px;
+            border-color: #b1b1b1;
+        }
+
+        #editor {
+            position: absolute;
+            top: 30px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+
+
+    </style>
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script src="../js//ace.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        var edit = function () {
+            $('#left').removeClass('hidden');
+            $('#right').removeClass('whole');
+            $('#right').addClass('split');
+            $('#edit').addClass('hidden');
+        }
+        var done = function () {
+            $('#left').addClass('hidden');
+            $('#right').removeClass('split');
+            $('#right').addClass('whole');
+            $('#edit').removeClass('hidden');
+        }
+        var refresh = function () {
+            //$('#left').removeClass('hidden');
+            //$('#right').removeClass('whole');
+            //$('#right').addClass('split');
+            //$('#edit').hide();
+        }
+    </script>
+
+</head>
+<body>
+<div class="split left hidden" id="left">
+    <button class="actionbutton" id="donehbutton" style="width:100px;" onclick="done(); return false;">Done</button>
+    <button class="actionbutton" id="refreshbutton" style="width:100px;"  onclick="refresh(); return false;">Refresh</button>
+
+    <div id="editor">function foo(items) {
+        var x = "All this is syntax highlighted";
+        return x;
+        }</div>
+
+</div>
+
+<div class="whole right" id="right">
+    <div id="edit">
+        <a href="#" onclick="edit()" >Edit</a>
+    </div>
+    <div id="image">
+        <img src="http://localhost:8081/test01.png">
+    </div>
+</div>
+</body>
+<script>
+    var editor = ace.edit("editor");
+    editor.setTheme("ace/theme/monokai");
+    editor.session.setMode("ace/mode/javascript");
+</script>
+</html>
