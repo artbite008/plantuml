@@ -32,7 +32,7 @@
                 $('#donehbutton').attr('disabled','disabled');
 
                 $.ajax({
-                    url: 'uml/'+umlId,
+                    url: '${pageContext.request.contextPath}/uml/'+umlId,
                     type: 'POST',
                     data: umlText,
                     contentType: 'application/plain;charset=uft-8',
