@@ -35,7 +35,7 @@
                     <!-- We need this for a Servlet 3.0 environment, no web.xml anymore! -->
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                     <!-- first priority for the WAR name -->
-                    <warName>mywebapp</warName>
+                    <warName>uml</warName>
                 </configuration>
             </plugin>
         </plugins>

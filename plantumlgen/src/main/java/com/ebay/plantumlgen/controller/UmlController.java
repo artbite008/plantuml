@@ -25,8 +25,8 @@ public class UmlController {
 
 	private static final Logger logger = Logger.getLogger("IdentifierGenerationController");
 
-	private String LOCAL_FILE_FOLDER = "G:\\staticfiles\\";
-	private String READ_URL = "http://localhost:8081";
+	private String LOCAL_FILE_FOLDER = "C:\\uml_files\\";
+	private String READ_URL = "http://10.254.178.92:8081";
 
     @RequestMapping(value="/uml/{umlId}",method= RequestMethod.GET)
 	public String showUml(Model model, @PathVariable String umlId) {
