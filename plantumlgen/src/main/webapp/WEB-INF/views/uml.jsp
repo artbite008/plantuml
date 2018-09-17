@@ -3,10 +3,10 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>uml</title>
-    <link rel="stylesheet" rel="stylesheet"  href="css/style.css">
+    <link rel="stylesheet" rel="stylesheet"  href="../css/style.css">
 
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/ace.js"></script>
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/ace.js"></script>
     <script type="text/javascript">
         var edit = function () {
             $('#left').removeClass('hidden');
