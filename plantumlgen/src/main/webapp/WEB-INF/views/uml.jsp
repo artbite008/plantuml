@@ -75,7 +75,6 @@
         <img src="${readUrl}/${umlid}.png" id="umlchart">
     </div>
 </div>
-</body>
 <script>
     ace.edit("editor");
     $('#umlchart').attr("src",'${readUrl}/${umlid}.png?'+(Math.random()*1000000));
